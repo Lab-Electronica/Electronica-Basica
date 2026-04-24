@@ -1,2 +1,2 @@
-# Electr-nica-B-sica
+# Electronica-Basica
 Laboratorio de Electrónica Básica
