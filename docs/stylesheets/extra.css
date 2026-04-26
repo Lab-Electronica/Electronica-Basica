@@ -16,6 +16,59 @@
   font-weight: 700;
 }
 
+/*
+  Contenido de texto
+*/
+
+/* Justificar el texto principal de las páginas */
+.md-content__inner p {
+  text-align: justify;
+}
+
+/* Justificar las listas del texto principal */
+.md-content__inner li {
+  text-align: justify;
+}
+
+/* Ajuste del título principal de cada página */
+.md-typeset h1 {
+  font-size: 1.8rem;
+  margin-bottom: 0.6rem;
+}
+
+.md-typeset h1 {
+  font-size: 1.7rem;
+  margin-top: 0.4rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Figuras centradas */
+.md-typeset figure {
+  text-align: center;
+  margin: 1.5rem auto;
+}
+
+/* Imágenes dentro de figuras */
+.md-typeset figure img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+/* Pie de figura */
+.md-typeset figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  font-style: italic;
+  text-align: justify;
+  color: var(--md-default-fg-color--light);
+}
+
+
+/*
+  Elementos principales
+*/
+
 /* Elementos principales de primer nivel */
 .md-nav--primary > .md-nav__list > .md-nav__item > .md-nav__link {
   font-weight: 700;

@@ -60,8 +60,8 @@ nav:
   - Presentación: index.md
 
   - Introducción al laboratorio:
-    - El laboratorio de electrónica: introduccion/laboratorio.md
-    - Seguridad y buenas prácticas: introduccion/seguridad.md
+    - El laboratorio de electrónica: intro/lab.md
+    - Seguridad y buenas prácticas: intro/seg.md
 
   # - Instrumentación y equipamiento:
   #   - Visión general: instrumentacion/vision-general.md
@@ -75,8 +75,8 @@ nav:
   #   - Magnitudes eléctricas: fundamentos/magnitudes-electricas.md
   #   - Ley de Ohm y Kirchhoff: fundamentos/ohm-kirchhoff.md
   #   - Divisores de tensión y corriente: fundamentos/divisores.md
-    - Amplificadores: fund/amplificador-ideal.md
-    - Amplificadores - Parámetros y modelos: fund/amplificadores-parametros.md
+    - Amplificadores - modelo básico: fund/amp-ideal.md
+    - Amplificadores - Parámetros básicos: fund/amp-param.md
   #   - Procedimiento — Medidas básicas en CC: fundamentos/procedimiento-medidas-cc.md
 
   - Procedimientos generales:
@@ -127,8 +127,8 @@ nav:
   #   - Teoría y modelos: mosfet/teoria-modelos.md
   #   - Procedimiento — Caracterización: mosfet/procedimiento-caracterizacion.md
   #   - Polarización y punto de trabajo: mosfet/polarizacion.md
-     - Amplificador en fuente común: mosfet/amp-s-comun.md
-     - Procedimiento - medida de parámetros amplificador: mosfet/proc-amp-s-comun.md
+    - Amplificador en fuente común: mosfet/amp-s-com.md
+    - Procedimiento - medida de parámetros amplificador: mosfet/proc-amp-s-com.md
   #   - Espejos de corriente: mosfet/espejos-corriente.md
   #   - Amplificador diferencial: mosfet/amplificador-diferencial.md
   #   - Diseño — Etapas con MOSFET: mosfet/diseno-amplificadores.md
