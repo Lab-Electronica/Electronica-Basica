@@ -1,0 +1,151 @@
+site_name: Lab. de Electrónica Básica
+site_description: Laboratorio de Electrónica Básica
+site_author: Juan Echevarría
+site_url: https://lab-electronica.github.io/electronica-basica
+
+repo_url: https://github.com/lab-electronica/electronica-basica
+repo_name: GitHub
+
+copyright: >
+  © 2026 Juan Echevarría —
+  <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es" target="_blank">CC BY-NC-SA 4.0</a>
+
+theme:
+  name: material
+  language: es
+  features:
+    - navigation.top
+    - navigation.instant
+    - toc.follow
+    - content.code.copy
+    - search.highlight
+
+markdown_extensions:
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - admonition
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - attr_list
+  - md_in_html
+  - tables
+  - footnotes
+
+extra_css:
+  - stylesheets/extra.css
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+
+
+
+plugins:
+  - search:
+      lang: es
+  - glightbox
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/lab-electronica
+nav:
+  - Presentación: index.md
+
+  - Introducción al laboratorio:
+    - El laboratorio de electrónica: introduccion/laboratorio.md
+    - Seguridad y buenas prácticas: introduccion/seguridad.md
+
+  # - Instrumentación y equipamiento:
+  #   - Visión general: instrumentacion/vision-general.md
+  #   - Fuente de alimentación: instrumentacion/fuente-alimentacion.md
+  #   - Polímetro: instrumentacion/polimetro.md
+  #   - Generador de funciones: instrumentacion/generador-funciones.md
+  #   - Osciloscopio: instrumentacion/osciloscopio.md
+  #   - Placa de prototipos: instrumentacion/protoboard.md
+
+  - Fundamentos de circuitos:
+  #   - Magnitudes eléctricas: fundamentos/magnitudes-electricas.md
+  #   - Ley de Ohm y Kirchhoff: fundamentos/ohm-kirchhoff.md
+  #   - Divisores de tensión y corriente: fundamentos/divisores.md
+    - Amplificadores: fund/amplificador-ideal.md
+    - Amplificadores - Parámetros y modelos: fund/amplificadores-parametros.md
+  #   - Procedimiento — Medidas básicas en CC: fundamentos/procedimiento-medidas-cc.md
+
+  - Procedimientos generales:
+    #- Medidas básicas en CC: procs/med-basicas-cc.md
+    - Amplificadores - Medida de ganancia e impedancias : procs/med-g-zi-zo.md
+    - Amplificadores - Medida de ancho de banda : procs/med-bw.md
+
+    # - Medidas con osciloscopio: procedimientos/medidas-osciloscopio.md
+    #- Verificación experimental de circuitos: procedimientos/verificacion-experimental.md
+
+  # - Componentes pasivos:
+  #   - Resistencias: componentes-pasivos/resistencias.md
+  #   - Condensadores: componentes-pasivos/condensadores.md
+  #   - Bobinas: componentes-pasivos/bobinas.md
+  #   - Procedimiento — Identificación y medida: componentes-pasivos/procedimiento-identificacion.md
+
+  # - Circuitos en CC:
+  #   - Thévenin y Norton: circuitos-cc/thevenin-norton.md
+  #   - Simulación en CC: circuitos-cc/simulacion-cc.md
+  #   - Procedimiento — Verificación experimental: circuitos-cc/procedimiento-verificacion.md
+
+  # - Circuitos en CA:
+  #   - Señales sinusoidales: circuitos-ca/senales-sinusoidales.md
+  #   - Impedancia y desfase: circuitos-ca/impedancia-desfase.md
+  #   - Filtros RC, RL y RLC: circuitos-ca/filtros-rc-rl-rlc.md
+  #   - Simulación en CA: circuitos-ca/simulacion-ca.md
+  #   - Procedimiento — Medidas con osciloscopio: circuitos-ca/procedimiento-osciloscopio.md
+
+  # - El diodo:
+  #   - Teoría y modelos: diodo/teoria-modelos.md
+  #   - Procedimiento — Caracterización: diodo/procedimiento-caracterizacion.md
+  #   - Recortadores de onda: diodo/recortadores.md
+  #   - Rectificadores: diodo/rectificadores.md
+  #   - Diseño — Rectificadores y limitadores: diodo/diseno-rectificadores.md
+  #   - Simulación con LTspice: diodo/simulacion-diodo.md
+
+  # - El transistor BJT:
+  #   - Teoría y modelos: bjt/teoria-modelos.md
+  #   - Procedimiento — Caracterización: bjt/procedimiento-caracterizacion.md
+  #   - Polarización y punto de trabajo: bjt/polarizacion.md
+  #   - Amplificador en emisor común: bjt/amplificador-emisor-comun.md
+  #   - Amplificador en colector común: bjt/amplificador-colector-comun.md
+  #   - Amplificador en base común: bjt/amplificador-base-comun.md
+  #   - Diseño — Etapas amplificadoras: bjt/diseno-amplificadores.md
+  #   - Simulación con LTspice: bjt/simulacion-bjt.md
+
+  - El transistor MOSFET:
+  #   - Teoría y modelos: mosfet/teoria-modelos.md
+  #   - Procedimiento — Caracterización: mosfet/procedimiento-caracterizacion.md
+  #   - Polarización y punto de trabajo: mosfet/polarizacion.md
+     - Amplificador en fuente común: mosfet/amp-s-comun.md
+     - Procedimiento - medida de parámetros amplificador: mosfet/proc-amp-s-comun.md
+  #   - Espejos de corriente: mosfet/espejos-corriente.md
+  #   - Amplificador diferencial: mosfet/amplificador-diferencial.md
+  #   - Diseño — Etapas con MOSFET: mosfet/diseno-amplificadores.md
+  #   - Simulación con LTspice: mosfet/simulacion-mosfet.md
+
+  # - Anexos:
+  #   - Componentes y valores de referencia:
+  #     - Código de colores de resistencias: anexos/componentes-valores/codigo-colores.md
+  #     - Valores normalizados serie E24 (5%): anexos/componentes-valores/serie-e24.md
+  #     - Valores normalizados serie E96 (1%): anexos/componentes-valores/serie-e96.md
+  #     - Condensadores — Códigos y valores: anexos/componentes-valores/condensadores-valores.md
+  #   - Herramientas de simulación:
+  #     - Introducción a Falstad: anexos/simuladores/falstad.md
+  #     - Introducción a LTspice: anexos/simuladores/ltspice.md
+  #     - Introducción a EasyEDA: anexos/simuladores/easyeda.md
+  #     - Comparativa de simuladores: anexos/simuladores/comparativa.md
+  #   - Recursos y bibliografía:
+  #     - Bibliografía recomendada: anexos/recursos/bibliografia.md
+  #     - Hojas de datos — Cómo leerlas: anexos/recursos/datasheets.md
+  #     - Enlaces de interés: anexos/recursos/enlaces.md
