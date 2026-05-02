@@ -16,6 +16,7 @@ theme:
   features:
     - navigation.top
     - navigation.instant
+    - navigation.footer
     - toc.follow
     - content.code.copy
     - search.highlight
@@ -45,8 +46,6 @@ extra_javascript:
   - javascripts/mathjax.js
   - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
 
-
-
 plugins:
   - search:
       lang: es
@@ -56,6 +55,7 @@ extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/lab-electronica
+
 nav:
   - Presentación: index.md
 
@@ -75,17 +75,35 @@ nav:
   #   - Magnitudes eléctricas: fundamentos/magnitudes-electricas.md
   #   - Ley de Ohm y Kirchhoff: fundamentos/ohm-kirchhoff.md
   #   - Divisores de tensión y corriente: fundamentos/divisores.md
-    - Amplificadores - modelo básico: fund/amp-ideal.md
+    - Amplificadores - Modelo básico: fund/amp-ideal.md
     - Amplificadores - Parámetros básicos: fund/amp-param.md
   #   - Procedimiento — Medidas básicas en CC: fundamentos/procedimiento-medidas-cc.md
 
   - Procedimientos generales:
-    #- Medidas básicas en CC: procs/med-basicas-cc.md
-    - Amplificadores - Medida de ganancia e impedancias : procs/med-g-zi-zo.md
-    - Amplificadores - Medida de ancho de banda : procs/med-bw.md
+  #   - Visión general: procs/index.md
 
-    # - Medidas con osciloscopio: procedimientos/medidas-osciloscopio.md
-    #- Verificación experimental de circuitos: procedimientos/verificacion-experimental.md
+  #   - Medidas en corriente continua:
+  #     - Introducción: procs/cc/index.md
+  #     - Medida de tensión continua: procs/cc/med-tension-cc.md
+  #     - Medida de corriente continua: procs/cc/med-corriente-cc.md
+  #     - Medida de resistencia: procs/cc/med-resistencia.md
+  #     - Comprobación de alimentación y masa: procs/cc/alimentacion-masa.md
+  #     - Medida del punto de trabajo: procs/cc/punto-trabajo.md
+
+  #   - Medidas en corriente alterna:
+  #     - Introducción: procs/ca/index.md
+  #     - Uso básico del osciloscopio: procs/ca/osciloscopio.md
+  #     - Medida de amplitud, periodo y frecuencia: procs/ca/amplitud-periodo-frecuencia.md
+  #     - Medida de desfase: procs/ca/desfase.md
+  #     - Medida de valor eficaz: procs/ca/valor-eficaz.md
+
+    - Medidas en amplificadores:
+      - Introducción: procs/amp/index.md
+      - Medida de ganancia de tensión: procs/amp/med-av.md
+      - Medida de impedancia de entrada: procs/amp/med-zi.md
+      - Medida de impedancia de salida: procs/amp/med-zo.md
+    #   - Medida de ancho de banda: procs/amp/med-bw.md
+    #   - Caracterización completa de un amplificador: procs/amp/carac.md
 
   # - Componentes pasivos:
   #   - Resistencias: componentes-pasivos/resistencias.md

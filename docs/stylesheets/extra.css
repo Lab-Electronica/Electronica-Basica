@@ -99,3 +99,144 @@
 .md-nav--primary > .md-nav__list > .md-nav__item {
   margin-top: 0.25rem;
 }
+
+/* 
+  Tablas
+*/
+/* Contenedor de la tabla */
+.tabla-lab01 .md-typeset__scrollwrap {
+  display: flex;
+  justify-content: center;
+}
+
+/* Contenedor interno que crea MkDocs Material */
+.tabla-lab01 .md-typeset__table {
+  display: inline-block;
+  width: auto;
+}
+
+
+.tabla-lab01 table {
+  width: auto;
+  min-width: 70%;
+  max-width: 100%;
+  margin: 1.5em auto;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid #1976d2;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Celdas */
+.tabla-lab01 th,
+.tabla-lab01 td {
+  padding: 0.65em 0.9em;
+  border-right: 1px solid #1976d2;
+  border-bottom: 1px solid #1976d2;
+}
+
+/* Cabecera */
+.tabla-lab01 th {
+  background-color: #1976d2;
+  color: white;
+  text-align: left;
+  font-weight: 600;
+}
+
+/* Bordes superiores redondeados */
+.tabla-lab01 thead th:first-child {
+  border-top-left-radius: 10px;
+}
+
+.tabla-lab01 thead th:last-child {
+  border-top-right-radius: 10px;
+}
+
+/* Evitar doble borde derecho */
+.tabla-lab01 th:last-child,
+.tabla-lab01 td:last-child {
+  border-right: none;
+}
+
+/* Evitar borde inferior en la última fila */
+.tabla-lab01 tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.tabla-lab01-caption {
+  text-align: center;
+  font-weight: 600;
+  color: #1976d2;
+  margin: 1.5em auto 0.4em auto;
+}
+
+/*
+  Figuras
+*/
+
+/* Figura reutilizable para contenidos de laboratorio */
+.figura-lab01 {
+  margin: 1.5em auto;
+  text-align: center;
+}
+
+.figura-lab01 img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  border: none;
+  border-radius: 0;
+}
+
+/* Caption de figura */
+.figura-lab01 figcaption {
+  margin-top: 0.4em;
+  text-align: center;
+  font-weight: 600;
+  color: #1976d2;
+}
+
+/*
+   Footer
+*/
+/* Ocultar copyright y enlaces sociales del footer */
+.md-footer-meta {
+  display: none;
+}
+
+/* Footer de navegación anterior/siguiente */
+.md-footer {
+  background-color: #1976d2;
+}
+
+/* Reducir altura del footer */
+.md-footer__inner {
+  padding-top: 0.1rem;
+  padding-bottom: 0.1rem;
+  min-height: 2rem;
+}
+
+/* Reducir espacio de los enlaces anterior/siguiente */
+.md-footer__link {
+  padding-top: 0.15rem;
+  padding-bottom: 0.15rem;
+}
+
+/* Reduce texto "Anterior" / "Siguiente" */
+.md-footer__direction {
+  font-size: 0.55rem;
+  line-height: 1;
+}
+
+/* Reduce el título de la página anterior/siguiente */
+.md-footer__title {
+  font-size: 0.7rem;
+  line-height: 1.1;
+}
+
+/* Iconos de anterior/siguiente */
+.md-footer__button {
+  color: white;
+}
