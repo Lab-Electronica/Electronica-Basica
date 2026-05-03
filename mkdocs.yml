@@ -77,8 +77,10 @@ nav:
   #   - Divisores de tensión y corriente: fundamentos/divisores.md
     - Amplificadores - Modelo básico: fund/amp-ideal.md
     - Amplificadores - Parámetros básicos: fund/amp-param.md
+    - Amplificadores - Ancho de banda: fund/amp-bw.md
   #   - Procedimiento — Medidas básicas en CC: fundamentos/procedimiento-medidas-cc.md
     - Condensadores de acoplo y desacoplo: fund/cond-acop.md
+    - Criterio de -3 dB: fund/corte-3db.md
 
   - Procedimientos generales:
   #   - Visión general: procs/index.md
@@ -99,11 +101,12 @@ nav:
   #     - Medida de valor eficaz: procs/ca/valor-eficaz.md
 
     - Medidas en amplificadores:
-      - Introducción: procs/amp/index.md
+      - Introducción a amplificadores: procs/amp/index.md
       - Medida de ganancia de tensión: procs/amp/med-av.md
       - Medida de impedancia de entrada: procs/amp/med-zi.md
       - Medida de impedancia de salida: procs/amp/med-zo.md
-    #   - Medida de ancho de banda: procs/amp/med-bw.md
+      - Medida de ancho de banda: procs/amp/med-bw.md
+
     #   - Caracterización completa de un amplificador: procs/amp/carac.md
 
   # - Componentes pasivos:

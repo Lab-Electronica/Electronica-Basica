@@ -33,4 +33,5 @@ Para calcular los parámetros eléctricos del modelo de un amplificador real, se
 ## Limitaciones del modelo básico
 
 Este modelo es muy útil, pero hay que entenderlo como una idealización válida dentro de ciertos límites. Los componentes reales que forman el interior de la etapa amplificadora hacen que el comportamiento no sea exactamente constante en cualquier circunstancia.
-Por ejemplo, la ganancia puede variar si la frecuencia cambia mucho, si la señal aplicada es demasiado grande o si la carga conectada a la salida no es la prevista.  En cursos más avanzados se estudian con detalle otros parámetros relevantes, como la respuesta con la frecuencia, el rango dinámico, la distorsión, el ruido o la estabilidad.
+Por ejemplo, la ganancia puede variar si la frecuencia cambia mucho, si la señal aplicada es demasiado grande o si la carga conectada a la salida no es la prevista.  En cursos más avanzados se estudian con detalle otros parámetros relevantes, como la 
+[respuesta con la frecuencia](amp-bw.md), el rango dinámico, la distorsión, el ruido o la estabilidad.
