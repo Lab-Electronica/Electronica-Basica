@@ -18,7 +18,12 @@ De esta expresión se deduce que la impedancia del condensador disminuye cuando 
 
 ## Condensador de acoplo entre etapas
 
-Una de las aplicaciones más habituales es el **acoplo entre etapas**. Al realizar el diseño de un equipo electrónico la funcionalidad se divide en módulos o etapas más sencillas, recibiendo cada una de ellas una señal a su entrada y sirviéndola procesada a su salida.
+Una de las aplicaciones más habituales es el **acoplo entre etapas**. Al realizar el diseño de un equipo electrónico la funcionalidad se divide en módulos o etapas más sencillas, recibiendo cada una de ellas una señal a su entrada y sirviéndola procesada a su salida, tal como se observa en la Figura 1.
+
+<figure class="figura-lab01">
+  <img src="../images/Etapas.jpg" alt="Estructura de etapas de un equipo electrónico" width=100%">
+  <figcaption>Figura 1. Estructura de etapas de un equipo electrónico.</figcaption>
+</figure>
 
 Para realizar su función, cada etapa puede estar compuesta por diferentes componentes que requerirán su propia polarización para que cada componente esté en su punto de trabajo adecuado.
 
