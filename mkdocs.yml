@@ -78,6 +78,7 @@ nav:
     - Amplificadores - Modelo básico: fund/amp-ideal.md
     - Amplificadores - Parámetros básicos: fund/amp-param.md
   #   - Procedimiento — Medidas básicas en CC: fundamentos/procedimiento-medidas-cc.md
+    - Condensadores de acoplo y desacoplo: fund/cond-acop.md
 
   - Procedimientos generales:
   #   - Visión general: procs/index.md
