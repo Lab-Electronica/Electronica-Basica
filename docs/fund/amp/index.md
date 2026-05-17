@@ -4,7 +4,9 @@ Un amplificador es un circuito electrónico diseñado para **aumentar el nivel d
 
 En electrónica analógica, los amplificadores se utilizan para adaptar señales procedentes de sensores, aumentar niveles de señal, excitar cargas, acondicionar medidas o formar parte de sistemas más complejos, como filtros activos, osciladores, fuentes de alimentación reguladas o sistemas de adquisición de datos.
 
-Aunque existen muchos tipos de amplificadores, todos comparten una **idea básica: una señal de entrada controla una señal de salida de mayor amplitud, utilizando para ello la energía suministrada por una fuente de alimentación externa.**
+Aunque existen muchos tipos de amplificadores, todos comparten una **idea básica**: 
+
+!!! note "En los amplificadores una señal de entrada controla una señal de salida de mayor amplitud, utilizando para ello la energía suministrada por una fuente de alimentación externa"
 
 ## Modelo general de amplificador
 
@@ -24,11 +26,11 @@ Este modelo permite estudiar el comportamiento externo del amplificador sin entr
 
 Existen varias familias de amplificadores especialmente importantes en electrónica básica y analógica.
 
-### Modelo general de amplificador
+## Amplificadores básicos
 
-El modelo general de amplificador permite describir una etapa amplificadora a partir de sus magnitudes de entrada y salida.
+En esta sección llamaremos amplificadores básicos a aquellos circuitos en los que una señal de entrada, tomada respecto a una referencia común, controla una señal amplificada en la salida. 
 
-Se utiliza para introducir los conceptos fundamentales de ganancia, impedancia de entrada, impedancia de salida y respuesta en frecuencia.
+El análisis se centra en su comportamiento externo, es decir, en la relación entre las señales de entrada y salida. Para ello se emplean parámetros fundamentales como la ganancia, la impedancia de entrada, la impedancia de salida y la respuesta en frecuencia.
 
 ### Amplificadores diferenciales
 
