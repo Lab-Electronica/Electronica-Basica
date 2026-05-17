@@ -6,7 +6,7 @@ Esta documentación reúne una colección de artículos orientados al aprendizaj
 
 Los contenidos se organizan en distintos tipos de artículos:
 
-- **Artículos de teoría**, dedicados a explicar los conceptos fundamentales necesarios para comprender los circuitos.
+- **Artículos de fundamentos**, dedicados a explicar los conceptos teóricos necesarios para comprender los circuitos.
 - **Procedimientos de medida**, centrados en describir cómo se realizan medidas experimentales en el laboratorio.
 - **Simulaciones**, pensadas para analizar el comportamiento de los circuitos antes de montarlos físicamente.
 - **Experiencias de laboratorio**, donde se proponen montajes y actividades prácticas para ejercitar los conocimientos adquiridos.

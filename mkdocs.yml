@@ -72,33 +72,50 @@ nav:
   #   - Placa de prototipos: instrumentacion/protoboard.md
 
   - Fundamentos de circuitos:
-  #   - Magnitudes eléctricas: fundamentos/magnitudes-electricas.md
-  #   - Ley de Ohm y Kirchhoff: fundamentos/ohm-kirchhoff.md
-  #   - Divisores de tensión y corriente: fundamentos/divisores.md
-    - Amplificadores - Modelo básico: fund/amp-ideal.md
-    - Amplificadores - Parámetros básicos: fund/amp-param.md
-    - Amplificadores - Ancho de banda: fund/amp-bw.md
-  #   - Procedimiento — Medidas básicas en CC: fundamentos/procedimiento-medidas-cc.md
-    - Condensadores de acoplo y desacoplo: fund/cond-acop.md
-    - Criterio de -3 dB: fund/corte-3db.md
+    # - Magnitudes eléctricas: fundamentos/magnitudes-electricas.md
+    # - Ley de Ohm y Kirchhoff: fundamentos/ohm-kirchhoff.md
+    # - Divisores de tensión y corriente: fundamentos/divisores.md
+
+    - Amplificadores:
+      - Introducción: fund/amp/index.md
+
+      - Modelo general:
+        - Modelo básico: fund/amp/gen/mod.md
+        - Parámetros básicos: fund/amp/gen/param.md
+        - Ancho de banda: fund/amp/gen/bw.md
+
+      - Amplificador diferencial:
+        - Introducción: fund/amp/adif/index.md
+
+      - Amplificadores operacionales:
+        - Introducción: fund/amp/ope/index.md
+
+      - Amplificadores de potencia:
+        - Introducción: fund/amp/pot/index.md
+
+      - Conceptos comunes:
+        - Condensadores de acoplo y desacoplo: fund/amp/comun/cond-acop.md
+        - Criterio de -3 dB: fund/amp/comun/corte-3db.md
+
+    # - Procedimiento — Medidas básicas en CC: fundamentos/procedimiento-medidas-cc.md
 
   - Procedimientos generales:
-  #   - Visión general: procs/index.md
+    # - Visión general: procs/index.md
 
-  #   - Medidas en corriente continua:
-  #     - Introducción: procs/cc/index.md
-  #     - Medida de tensión continua: procs/cc/med-tension-cc.md
-  #     - Medida de corriente continua: procs/cc/med-corriente-cc.md
-  #     - Medida de resistencia: procs/cc/med-resistencia.md
-  #     - Comprobación de alimentación y masa: procs/cc/alimentacion-masa.md
-  #     - Medida del punto de trabajo: procs/cc/punto-trabajo.md
+    # - Medidas en corriente continua:
+    #   - Introducción: procs/cc/index.md
+    #   - Medida de tensión continua: procs/cc/med-tension-cc.md
+    #   - Medida de corriente continua: procs/cc/med-corriente-cc.md
+    #   - Medida de resistencia: procs/cc/med-resistencia.md
+    #   - Comprobación de alimentación y masa: procs/cc/alimentacion-masa.md
+    #   - Medida del punto de trabajo: procs/cc/punto-trabajo.md
 
-  #   - Medidas en corriente alterna:
-  #     - Introducción: procs/ca/index.md
-  #     - Uso básico del osciloscopio: procs/ca/osciloscopio.md
-  #     - Medida de amplitud, periodo y frecuencia: procs/ca/amplitud-periodo-frecuencia.md
-  #     - Medida de desfase: procs/ca/desfase.md
-  #     - Medida de valor eficaz: procs/ca/valor-eficaz.md
+    # - Medidas en corriente alterna:
+    #   - Introducción: procs/ca/index.md
+    #   - Uso básico del osciloscopio: procs/ca/osciloscopio.md
+    #   - Medida de amplitud, periodo y frecuencia: procs/ca/amplitud-periodo-frecuencia.md
+    #   - Medida de desfase: procs/ca/desfase.md
+    #   - Medida de valor eficaz: procs/ca/valor-eficaz.md
 
     - Medidas en amplificadores:
       - Introducción a amplificadores: procs/amp/index.md
@@ -107,7 +124,7 @@ nav:
       - Medida de impedancia de salida: procs/amp/med-zo.md
       - Medida de ancho de banda: procs/amp/med-bw.md
 
-    #   - Caracterización completa de un amplificador: procs/amp/carac.md
+    # - Caracterización completa de un amplificador: procs/amp/carac.md
 
   # - Componentes pasivos:
   #   - Resistencias: componentes-pasivos/resistencias.md
@@ -146,15 +163,15 @@ nav:
   #   - Simulación con LTspice: bjt/simulacion-bjt.md
 
   - El transistor MOSFET:
-  #   - Teoría y modelos: mosfet/teoria-modelos.md
-  #   - Procedimiento — Caracterización: mosfet/procedimiento-caracterizacion.md
-  #   - Polarización y punto de trabajo: mosfet/polarizacion.md
+    # - Teoría y modelos: mosfet/teoria-modelos.md
+    # - Procedimiento — Caracterización: mosfet/procedimiento-caracterizacion.md
+    # - Polarización y punto de trabajo: mosfet/polarizacion.md
     - Amplificador en fuente común: mosfet/amp-s-com.md
     - Procedimiento - medida de parámetros amplificador: mosfet/proc-amp-s-com.md
-  #   - Espejos de corriente: mosfet/espejos-corriente.md
-  #   - Amplificador diferencial: mosfet/amplificador-diferencial.md
-  #   - Diseño — Etapas con MOSFET: mosfet/diseno-amplificadores.md
-  #   - Simulación con LTspice: mosfet/simulacion-mosfet.md
+    # - Espejos de corriente: mosfet/espejos-corriente.md
+    - Amplificador diferencial: mosfet/amp-dif.md
+    # - Diseño — Etapas con MOSFET: mosfet/diseno-amplificadores.md
+    # - Simulación con LTspice: mosfet/simulacion-mosfet.md
 
   # - Anexos:
   #   - Componentes y valores de referencia:
