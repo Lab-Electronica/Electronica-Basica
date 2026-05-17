@@ -26,7 +26,7 @@ Este modelo permite estudiar el comportamiento externo del amplificador sin entr
 
 Existen varias familias de amplificadores especialmente importantes en electrónica básica y analógica.
 
-## Amplificadores básicos
+### Amplificadores básicos
 
 En esta sección llamaremos amplificadores básicos a aquellos circuitos en los que una señal de entrada, tomada respecto a una referencia común, controla una señal amplificada en la salida. 
 

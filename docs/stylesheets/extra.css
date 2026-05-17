@@ -30,16 +30,71 @@
   text-align: justify;
 }
 
-/* Ajuste del título principal de cada página */
+/* Título principal de la página */
 .md-typeset h1 {
-  font-size: 1.8rem;
-  margin-bottom: 0.6rem;
+  font-size: 1.75rem;
+  font-weight: 800;
+  margin-top: 0.2rem;
+  margin-bottom: 0.45rem;
+  line-height: 1.2;
 }
 
-.md-typeset h1 {
-  font-size: 1.7rem;
-  margin-top: 0.4rem;
-  margin-bottom: 0.5rem;
+/* Títulos de segundo nivel */
+.md-typeset h2 {
+  font-size: 1.35rem;
+  font-weight: 750;
+  margin-top: 1.1rem;
+  margin-bottom: 0.35rem;
+  line-height: 1.25;
+}
+
+/* Títulos de tercer nivel */
+.md-typeset h3 {
+  font-size: 1.12rem;
+  font-weight: 700;
+  margin-top: 0.9rem;
+  margin-bottom: 0.25rem;
+  line-height: 1.25;
+}
+
+/* Títulos de cuarto nivel y siguientes */
+.md-typeset h4,
+.md-typeset h5,
+.md-typeset h6 {
+  font-weight: 700;
+  margin-top: 0.75rem;
+  margin-bottom: 0.2rem;
+  line-height: 1.25;
+}
+
+/* Reducir separación entre un título y el primer párrafo posterior */
+.md-typeset h1 + p,
+.md-typeset h2 + p,
+.md-typeset h3 + p,
+.md-typeset h4 + p {
+  margin-top: 0.25rem;
+}
+
+/* Reducir separación entre título y listas posteriores */
+.md-typeset h1 + ul,
+.md-typeset h2 + ul,
+.md-typeset h3 + ul,
+.md-typeset h4 + ul,
+.md-typeset h1 + ol,
+.md-typeset h2 + ol,
+.md-typeset h3 + ol,
+.md-typeset h4 + ol {
+  margin-top: 0.25rem;
+}
+
+/* Todos los títulos en azul */
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3,
+.md-typeset h4,
+.md-typeset h5,
+.md-typeset h6 {
+  color: #1976d2;
 }
 
 /* Figuras centradas */

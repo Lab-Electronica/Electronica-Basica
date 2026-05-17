@@ -79,12 +79,12 @@ nav:
     - Amplificadores:
       - Introducción: fund/amp/index.md
 
-      - Modelo general:
+      - Amplificadores básicos:
         - Modelo básico: fund/amp/gen/mod.md
         - Parámetros básicos: fund/amp/gen/param.md
         - Ancho de banda: fund/amp/gen/bw.md
 
-      - Amplificador diferencial:
+      - Amplificadores diferenciales:
         - Introducción: fund/amp/adif/index.md
 
       - Amplificadores operacionales:
