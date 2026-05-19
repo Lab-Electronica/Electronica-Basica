@@ -7,10 +7,21 @@ Laboratorio de Electrónica Básica
 
 pip install "schemdraw[svgmath]"
 
-## Preparación de las carpetas de trabajo y salida
-mkdir docs\figures\circuitos
-mkdir scripts\schemdraw
+## Configurar
+hooks:
+  - hooks/schemdraw_hook.py
 
+Creamos carpeta:
+    hooks/
+
+## Cstructura ficheros
+docs/
+└─ procs/
+   └─ amp/
+      ├─ med-av.md
+      └─ images/
+         └─ svg/
+            └─ med-av-divisor-tension-a1b2c3d4.svg
 ## Uso 
 python scripts\schemdraw\divisor_tension.py
 python -m mkdocs serve

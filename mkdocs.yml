@@ -56,6 +56,9 @@ extra:
     - icon: fontawesome/brands/github
       link: https://github.com/lab-electronica
 
+hooks:
+  - hooks/schemdraw_hook.py
+
 nav:
   - Presentación: index.md
 
@@ -86,6 +89,7 @@ nav:
 
       - Amplificadores diferenciales:
         - Introducción: fund/amp/adif/index.md
+        - Modelo: fund/amp/adif/mod.md
 
       - Amplificadores operacionales:
         - Introducción: fund/amp/ope/index.md
@@ -94,8 +98,9 @@ nav:
         - Introducción: fund/amp/pot/index.md
 
       - Conceptos comunes:
-        - Condensadores de acoplo y desacoplo: fund/amp/comun/cond-acop.md
+        - Condensadores de acoplo y desacoplo: fund/amp/comun/acoplo.md
         - Criterio de -3 dB: fund/amp/comun/corte-3db.md
+        - Fuente alimentación simétrica: fund/amp/comun/fuente-sim.md
 
     # - Procedimiento — Medidas básicas en CC: fundamentos/procedimiento-medidas-cc.md
 
