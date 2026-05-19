@@ -185,13 +185,19 @@ def on_page_markdown(markdown: str, page, config, files) -> str:
     """
     Busca bloques ```schemdraw ... ``` en cada página Markdown,
     genera el SVG y sustituye el bloque por una figura HTML.
+
+    La numeración de figuras se reinicia en cada archivo Markdown.
     """
     docs_dir = Path(config["docs_dir"])
 
     source_dir = _page_source_dir(page)
     page_stem = _page_stem(page)
 
+    figure_counter = 0
+
     def replace_block(match: re.Match) -> str:
+        nonlocal figure_counter
+
         attrs = _parse_attrs(match.group("attrs"))
         code = match.group("code").strip()
 
@@ -199,6 +205,10 @@ def on_page_markdown(markdown: str, page, config, files) -> str:
         alt = attrs.get("alt", title or "Circuito generado con SchemDraw")
         name = attrs.get("name", title or page_stem or "circuito")
         css_class = attrs.get("class", "schemdraw-figure")
+        width = attrs.get("width", "")
+
+        show_caption = attrs.get("caption", "true").lower() != "false"
+        numbered = attrs.get("numbered", "true").lower() != "false"
 
         code_hash = hashlib.sha1(code.encode("utf-8")).hexdigest()[:10]
         file_name = f"{_slugify(page_stem)}-{_slugify(name)}-{code_hash}.svg"
@@ -213,13 +223,28 @@ def on_page_markdown(markdown: str, page, config, files) -> str:
 
         img_src = _relative_url_from_page(page, asset_path)
 
+        img_style = ""
+        if width:
+            img_style = f' style="max-width: {html.escape(width)}; width: 100%; height: auto;"'
+
         figure = [
             f'<figure class="{html.escape(css_class)}">',
-            f'  <img src="{html.escape(img_src)}" alt="{html.escape(alt)}">',
+            f'  <img src="{html.escape(img_src)}" alt="{html.escape(alt)}"{img_style}>',
         ]
 
-        if title:
-            figure.append(f'  <figcaption>{html.escape(title)}</figcaption>')
+        if show_caption:
+            if numbered:
+                figure_counter += 1
+
+                if title:
+                    caption_text = f"Figura {figure_counter}. {title}"
+                else:
+                    caption_text = f"Figura {figure_counter}"
+            else:
+                caption_text = title
+
+            if caption_text:
+                figure.append(f'  <figcaption>{html.escape(caption_text)}</figcaption>')
 
         figure.append("</figure>")
 

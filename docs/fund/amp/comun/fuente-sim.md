@@ -24,7 +24,7 @@ Las dos fuentes se etiquetan como:
 
 El punto común entre ambas fuentes se conecta a tierra. Por tanto, la fuente superior proporciona la tensión positiva y la fuente inferior proporciona la tensión negativa respecto de ese punto de referencia.
 
-```schemdraw name="fuente-simetrica-dos-fuentes" title="Fuente simétrica construida con dos fuentes de tensión" alt="Fuente simétrica con dos fuentes de tensión en serie y tierra en el punto medio"
+```schemdraw name="fuente-simetrica-2g" width=360px title="Fuente simétrica construida con dos fuentes de tensión" alt="Fuente simétrica con dos fuentes de tensión en serie y tierra en el punto medio"
 # Fuente simétrica con dos fuentes en serie.
 # El nodo central se toma como tierra.
 
@@ -61,7 +61,7 @@ E = 2 \cdot V_{CC}
 
 Si se conectan dos resistencias iguales en serie entre el terminal positivo y el terminal negativo de la fuente, el punto medio queda situado aproximadamente a la mitad de la tensión total. Ese punto medio puede tomarse como tierra.
 
-```schemdraw name="fuente-simetrica-divisor-resistivo" title="Fuente simétrica básica obtenida con una fuente y dos resistencias" alt="Fuente simétrica básica con una fuente de tensión y divisor resistivo con tierra en el punto medio"
+```schemdraw name="fuente-sim-r" width=280px title="Fuente simétrica básica obtenida con una fuente y dos resistencias" alt="Fuente simétrica básica con una fuente de tensión y divisor resistivo con tierra en el punto medio"
 # Fuente simétrica básica mediante divisor resistivo.
 # La tierra se toma en el punto medio entre las dos resistencias.
 
