@@ -2,7 +2,7 @@
 
 ## Fundamento del método
 
-Para la medida del ancho de banda se debe analizar la [respuesta en frecuencia del amplificador](../../fund/amp-bw.md). Aunque existen intrumentos específicos para realizar esto la medida se puede hacer de forma naual utilizando un generador de funciones y un osciloscopio.
+Para la medida del ancho de banda se debe analizar la [respuesta en frecuencia del amplificador](../../fund/amp/gen/bw.md). Aunque existen intrumentos específicos para realizar esto la medida se puede hacer de forma naual utilizando un generador de funciones y un osciloscopio.
 
 Una forma directa de estudiar la respuesta en frecuencia de un amplificador sería variar la frecuencia con el generador de funciones y medir la ganancia en cada punto. Sin embargo, este barrido completo requiere bastante tiempo y muchas medidas.
 

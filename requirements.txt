@@ -1,0 +1,4 @@
+mkdocs<2
+mkdocs-material>=9.7.6,<10
+schemdraw
+pymdown-extensions

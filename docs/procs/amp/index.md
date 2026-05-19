@@ -2,7 +2,7 @@
 
 ## Introducción
 
-En los artículos de fundamentos se ha presentado el amplificador como un bloque que relaciona una señal de entrada con una señal de salida. Antes de realizar las medidas de laboratorio, conviene revisar el [modelo básico de amplificador](../../fund/amp-ideal.md) y los [parámetros básicos de un amplificador](../../fund/amp-param.md).
+En los artículos de fundamentos se ha presentado el amplificador como un bloque que relaciona una señal de entrada con una señal de salida. Antes de realizar las medidas de laboratorio, conviene revisar el [modelo básico de amplificador](../../fund/amp/gen/mod.md) y los [parámetros básicos de un amplificador](../../fund/amp/gen/param.md).
 
 En esta sección se recogen los procedimientos necesarios para caracterizar experimentalmente un amplificador. El objetivo es medir sus parámetros principales a partir de señales reales, utilizando instrumentos habituales del laboratorio como el generador de funciones, el osciloscopio, el multímetro y resistencias auxiliares.
 

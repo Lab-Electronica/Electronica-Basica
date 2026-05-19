@@ -2,16 +2,14 @@
 
 Este documento contiene la transcripción completa y detallada de los apuntes de la **Práctica 5**, enfocada en el análisis en corriente continua (DC) y en pequeña señal de un amplificador basado en el MOSFET ALD1105. Las fórmulas están en formato MathJax/LaTeX y los esquemas están guardados en archivos SVG independientes para su descarga.
 
----
-
 ## 1. Especificaciones y Parámetros del Circuito
 
 ### Esquema del Circuito en Corriente Continua (DC)
 El circuito consta de un espejo de corriente en la parte superior formado por transistores PMOS ($M_2, M_3$) que fijan la corriente de referencia $I_{REF}$ a través de una resistencia de polarización $R_B$. El transistor de amplificación es un NMOS ($M_1$) configurado con una resistencia de realimentación $R_F$ entre drenador y puerta. Las capacidades $C_1$ y $C_2$ sirven como condensadores de acoplo para la entrada $V_i$ y la salida $V_o$ respectivamente.
 
-![Circuito DC](circuito_dc.svg)
 
 ### Parámetros de los Transistores (MOSFET ALD1105)
+
 * **Resistencia de Realimentación:** $R_F = 1 \text{ M}\Omega$
 * **Transistores NMOS:**
     * $\beta_n = 560 \ \mu\text{A/V}^2$
@@ -21,8 +19,6 @@ El circuito consta de un espejo de corriente en la parte superior formado por tr
     * $\beta_p = 210 \ \mu\text{A/V}^2$
     * $V_{THp} = -0.72 \text{ V} \implies |V_{THp}| = 0.72 \text{ V}$
     * $\lambda_p = 0.04 \text{ V}^{-1}$
-
----
 
 ## 2. Análisis del Punto de Trabajo (Estático / DC)
 
@@ -65,8 +61,6 @@ Una vez hallado $V_{D3}$, la resistencia de polarización de la rama del espejo 
 
 $$\boxed{R_B = \frac{V_{D3}}{I_{REF}}}$$
 
----
-
 ### Análisis en el Transistor $M_1$ (NMOS Amplificador)
 Analizamos ahora el comportamiento estático de la etapa de amplificación inferior:
 
@@ -105,8 +99,6 @@ $$\boxed{V_{D1} = V_{GS1} = V_{DS1} = V_{THn} + \sqrt{\frac{2 \cdot I_{REF}}{\be
 
 > **Nota:** Seleccionamos el signo positivo de la raíz para asegurar que el transistor $M_1$ se encuentre encendido y no entre en la zona de corte ($V_{GS1} > V_{THn}$).
 
----
-
 ### Resumen de Ecuaciones del Punto de Trabajo ($Q$)
 
 A continuación se recopilan las tensiones y corrientes constitutivas que definen el punto de operación en reposo (DC) del circuito:
@@ -122,9 +114,7 @@ I_{D1}  &= \frac{\beta_n}{2} \cdot \left(V_{D1} - V_{THn}\right)^2 \\
 R_B     &= \frac{V_{D3}}{I_{REF}}
 \end{aligned}$$
 
-![Curvas Características](curvas_caracteristicas.svg)
-
----
+### curvas_caracteristicas.svg
 
 ## 3. Modelo de Pequeña Señal (AC)
 
@@ -139,24 +129,22 @@ $$g_m = \left. \frac{\partial I_D}{\partial V_{GS}} \right|_Q \quad ; \quad \fra
 ### Cálculo de Parámetros Dinámicos
 
 #### Transconductancia ($g_m$):
-$$g_{m1} = \beta_n \cdot \left(V_{GS1Q} - V_{THn}\right) \cdot \left(1 + \lambda_n \cdot V_{DS1Q}ight) \simeq \beta_n \cdot \left(V_{GS1Q} - V_{THn}ight)}$$
+$$g_{m1} = \beta_n \cdot \left(V_{GS1Q} - V_{THn}\right) \cdot \left(1 + \lambda_n \cdot V_{DS1Q}
+ight) \simeq \beta_n \cdot \left(V_{GS1Q} - V_{THn}
+ight)}$$
 
 #### Resistencia de Salida Dinámica ($r_o$):
 $$\boxed{r_{o1} = \frac{1}{\lambda_n \cdot I_{D1Q}}} \quad \text{y} \quad \boxed{r_{o2} = \frac{1}{\lambda_p \cdot I_{D2Q}}}$$
-
----
 
 ### Esquema del Circuito Completo en Pequeña Señal
 
 Sustituyendo los modelos correspondientes de pequeña señal en la topología global de la etapa (con las fuentes de continua pasivadas y los condensadores actuando como cortocircuitos ideales en la banda de paso):
 
-![Circuito Pequeña Señal](circuito_pequena_senal.svg)
+### circuito_pequena_senal.svg
 
 A partir de este esquema equivalente, deducimos las siguientes igualdades de tensiones de nodo:
 
 $$v_g = v_i = v_{gs1} \quad ; \quad v_{ds1} = v_{d1} = v_{d2} = v_o$$
-
----
 
 ## 4. Cálculo de las Magnitudes de Pequeña Señal
 
@@ -167,14 +155,10 @@ $$\frac{v_o}{r_{o1}} + \frac{v_o}{r_{o2}} + \frac{v_o - v_i}{R_F} + g_{m1} \cdot
 
 $$\boxed{A_v = \frac{v_o}{v_i} = - \frac{g_{m1} - \frac{1}{R_F}}{\frac{1}{r_{o1}} + \frac{1}{r_{o2}} + \frac{1}{R_F}}}$$
 
----
-
 ### 4.2 Impedancia de Salida ($Z_o$)
 Anulamos la fuente de tensión de entrada ($v_i = 0$), lo que implica que $v_{gs1} = 0 \implies g_{m1}v_{gs1} = 0$:
 
 $$\boxed{Z_o = \left(\frac{1}{r_{o1}} + \frac{1}{r_{o2}} + \frac{1}{R_F}\right)^{-1} = r_{o1} \parallel r_{o2} \parallel R_F}$$
-
----
 
 ### 4.3 Impedancia de Entrada ($Z_i$)
 Aplicando el efecto Miller a través de la resistencia de realimentación $R_F$:

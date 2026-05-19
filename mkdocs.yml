@@ -171,10 +171,12 @@ nav:
     # - Teoría y modelos: mosfet/teoria-modelos.md
     # - Procedimiento — Caracterización: mosfet/procedimiento-caracterizacion.md
     # - Polarización y punto de trabajo: mosfet/polarizacion.md
-    - Amplificador en fuente común: mosfet/amp-s-com.md
-    - Procedimiento - medida de parámetros amplificador: mosfet/proc-amp-s-com.md
+    # - Amplificador en fuente común: mosfet/amp-s-com.md
+    # - Procedimiento - medida de parámetros amplificador: mosfet/proc-s-com.md
     # - Espejos de corriente: mosfet/espejos-corriente.md
     - Amplificador diferencial: mosfet/amp-dif.md
+    - Amplificador práctica 5: mosfet/amp-esp.md
+    - Amplificador fuente común: mosfet/amp-s-com.md
     # - Diseño — Etapas con MOSFET: mosfet/diseno-amplificadores.md
     # - Simulación con LTspice: mosfet/simulacion-mosfet.md
 
