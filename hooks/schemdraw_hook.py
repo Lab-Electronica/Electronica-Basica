@@ -169,11 +169,25 @@ def _render_schemdraw_svg(code: str, svg_path: Path) -> None:
             margin=SCHEMDRAW_THEME["margin"],
         )
         # Caso especial del wire
-        def wire():
-            return elm.Line(
-                color=SCHEMDRAW_THEME["wire_color"],
-                lw=SCHEMDRAW_THEME["wire_lw"],
-            )
+        def wire(*args, **kwargs):
+            """
+            Cable con estilo común.
+
+            Acepta y reenvía cualquier argumento compatible con elm.Line().
+            Ejemplos:
+            wire()
+            wire(arrow="->")
+            wire(arrow="->", arrowwidth=0.3, arrowlength=0.45)
+            wire(color="red", lw=2)
+            """
+            defaults = {
+                "color": SCHEMDRAW_THEME["wire_color"],
+                "lw": SCHEMDRAW_THEME["wire_lw"],
+            }
+
+            defaults.update(kwargs)
+
+            return elm.Line(*args, **defaults)
         
         
         safe_globals = {

@@ -88,7 +88,7 @@ d += elm.ResistorIEC().down().label("R", loc="bottom")
 # d += elm.Dot()
 nodo_inferior = d.here
 
-d += wire().right().length(2).label("  -Vcc", loc="right")
+d += wire(arrow="->", arrowwidth=0.3, arrowlength=0.45).right().length(2).label("  -Vcc", loc="right")
 d += elm.Dot()
 
 # Recuperamos la posición del nodo superior
