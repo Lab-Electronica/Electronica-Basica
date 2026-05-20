@@ -20,6 +20,18 @@ SCHEMDRAW_BLOCK_RE = re.compile(
     re.DOTALL,
 )
 
+# Tema común para los circuitos
+SCHEMDRAW_THEME = {
+    "wire_color": "#1E5AA8",
+    "component_color": "#222222",
+    "fill_color": "#F7F9FC",
+    "text_color": "#111827",
+    "wire_lw": 1.8,
+    "component_lw": 1.6,
+    "font": "Arial",
+    "fontsize": 12,
+}
+
 
 def _slugify(text: str) -> str:
     """
@@ -133,6 +145,15 @@ def _render_schemdraw_svg(code: str, svg_path: Path) -> None:
         schemdraw.use("svg")
 
         d = schemdraw.Drawing(show=False, canvas="svg")
+
+        # aplicamos el tema definido para el circuito
+        d.config(
+            color=SCHEMDRAW_THEME["component_color"],
+            lw=SCHEMDRAW_THEME["component_lw"],
+            fill=SCHEMDRAW_THEME["fill_color"],
+            font=SCHEMDRAW_THEME["font"],
+            fontsize=SCHEMDRAW_THEME["fontsize"],
+        )
 
         safe_globals = {
             "__builtins__": {

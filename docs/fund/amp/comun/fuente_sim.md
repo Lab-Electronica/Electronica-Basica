@@ -2,13 +2,25 @@
 
 Una **fuente de alimentación simétrica** proporciona dos tensiones de alimentación respecto de un punto común de referencia, normalmente llamado **masa** o **tierra**. En el caso más habitual, las dos tensiones tienen el mismo valor absoluto:
 
-\(+V_{CC}\)   y   \(-V_{CC}\)
+\[
++V_{CC}
+\]
+
+y
+
+\[
+-V_{CC}
+\]
 
 Este tipo de alimentación es muy habitual en circuitos analógicos, especialmente en amplificadores operacionales, etapas amplificadoras discretas y circuitos que necesitan trabajar con señales alternas centradas alrededor de cero voltios.
 
 En una fuente simétrica ideal, el punto de tierra se toma como referencia de tensión:
 
-\(V_{GND} = 0\ \text{V}\)
+\[
+V_G = 0\ \text{V}
+\]
+
+De este modo, el terminal positivo se encuentra a una tensión positiva respecto de tierra, mientras que el terminal negativo se encuentra a una tensión negativa respecto de tierra.
 
 ## Fuente simétrica con dos fuentes de tensión
 
@@ -16,38 +28,53 @@ La forma más directa de construir una fuente simétrica consiste en conectar **
 
 En este montaje, si ambas fuentes tienen el mismo valor \(V_{CC}\), se obtiene:
 
-\(V_{+}  = +V_{CC}\)   y   \(V_{-} = -V_{CC}\)
+\[
+V_{+} = +V_{CC}
+\]
+
+\[
+V_{-} = -V_{CC}
+\]
 
 Las dos fuentes se etiquetan como:
 
-\(E_1 = V_{CC}\)   y   \(E_2 = V_{CC}\)
+\[
+E_1 = V_{CC}
+\]
+
+\[
+E_2 = V_{CC}
+\]
 
 El punto común entre ambas fuentes se conecta a tierra. Por tanto, la fuente superior proporciona la tensión positiva y la fuente inferior proporciona la tensión negativa respecto de ese punto de referencia.
 
-```schemdraw name="fuente-simetrica-2g" width=280px title="Fuente simétrica construida con dos fuentes de tensión" alt="Fuente simétrica con dos fuentes de tensión en serie y tierra en el punto medio"
+```schemdraw name="fuente-simetrica-dos-fuentes" title="Fuente simétrica construida con dos fuentes de tensión" alt="Fuente simétrica con dos fuentes de tensión en serie y tierra en el punto medio"
 # Fuente simétrica con dos fuentes en serie.
 # El nodo central se toma como tierra.
 
-d += elm.Dot()
-d += elm.Line().left().length(2).label(" Vcc", loc="right")
+d += elm.Line().right().length(2).label("Vcc", loc="right")
 
-d += elm.SourceV().down().reverse().label("E1 = Vcc ", loc="top")
+d += elm.SourceV().down().label("E1 = Vcc", loc="left")
 d += elm.Dot()
-d.push() # guardamos punto medio
-
 d += elm.Line().right().length(2)
-d += elm.Ground().label("GND = 0 V", loc="right")
+d += elm.Ground().label("0 V", loc="right")
 
-d.pop() # ovlvemos a punto medio
+d += elm.SourceV().down().label("E2 = Vcc", loc="left")
 
-d += elm.SourceV().down().reverse().label("E2 = Vcc ", loc="top")
-d += elm.Line().right().length(2).label(" -Vcc", loc="right")
-d += elm.Dot()
-
-
+d += elm.Line().right().length(2).label("-Vcc", loc="right")
 ```
 
-Una ventaja importante de este montaje es que permite obtener tensiones no simétricas si fuese necesario. Por ejemplo, si un circuito necesitase \(+15\ \text{V}\) y \(-5\ \text{V}\), se podrían ajustar las dos fuentes a valores diferentes: \(E_1 = 15\ \text{V}\) y \(E_2 = 5\ \text{V}\).  En ese caso, la alimentación ya no sería simétrica en valor absoluto, pero seguiría existiendo una tensión positiva y una tensión negativa respecto de la tierra común.
+Una ventaja importante de este montaje es que permite obtener tensiones no simétricas si fuese necesario. Por ejemplo, si un circuito necesitase \(+15\ \text{V}\) y \(-5\ \text{V}\), se podrían ajustar las dos fuentes a valores diferentes:
+
+\[
+E_1 = 15\ \text{V}
+\]
+
+\[
+E_2 = 5\ \text{V}
+\]
+
+En ese caso, la alimentación ya no sería simétrica en valor absoluto, pero seguiría existiendo una tensión positiva y una tensión negativa respecto de la tierra común.
 
 ## Fuente simétrica básica con una fuente y dos resistencias
 
@@ -61,31 +88,25 @@ E = 2 \cdot V_{CC}
 
 Si se conectan dos resistencias iguales en serie entre el terminal positivo y el terminal negativo de la fuente, el punto medio queda situado aproximadamente a la mitad de la tensión total. Ese punto medio puede tomarse como tierra.
 
-```schemdraw name="fuente-sim-r" width=280px title="Fuente simétrica básica obtenida con una fuente y dos resistencias" alt="Fuente simétrica básica con una fuente de tensión y divisor resistivo con tierra en el punto medio"
+```schemdraw name="fuente-simetrica-divisor-resistivo" title="Fuente simétrica básica obtenida con una fuente y dos resistencias" alt="Fuente simétrica básica con una fuente de tensión y divisor resistivo con tierra en el punto medio"
 # Fuente simétrica básica mediante divisor resistivo.
 # La tierra se toma en el punto medio entre las dos resistencias.
 
-elm.ResistorIEC()
+d += elm.Line().right().length(2).label("Vcc", loc="right")
 
-d += elm.Line().left().length(2).label("Vcc", loc="right")
-d.push()
-d += elm.ResistorIEC().down().label("R", loc="bottom")
+d += elm.Resistor().down().label("R", loc="left")
 d += elm.Dot()
-d.push()
 d += elm.Line().right().length(2)
-d += elm.Ground().label("GND = 0 V", loc="right")
-d.pop()
-d += elm.ResistorIEC().down().label("R", loc="bottom")
+d += elm.Ground().label("0 V", loc="right")
+
+d += elm.Resistor().down().label("R", loc="left")
 
 d += elm.Line().right().length(2).label("-Vcc", loc="right")
 
 # Fuente total entre los extremos del divisor.
-d.pop()
-d += elm.Line().left().length(2)
-d += elm.Line().down().length(1.5)
-d += elm.SourceV().down().reverse().label("E = 2 x Vcc ", loc="top")
-d += elm.Line().down().length(1.5)
-d += elm.Line().right().length(2)
+d += elm.Line().left().length(3)
+d += elm.SourceV().up().label("E = 2 x Vcc", loc="left")
+d += elm.Line().right().length(3)
 ```
 
 Para que el punto medio quede centrado, las dos resistencias deben tener el mismo valor:
