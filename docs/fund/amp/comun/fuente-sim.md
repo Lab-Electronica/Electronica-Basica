@@ -30,9 +30,9 @@ El punto común entre ambas fuentes se conecta a tierra. Por tanto, la fuente su
 
 d += elm.Dot()
 d += wire().left().length(2).label(" Vcc", loc="right")
-
+# d += elm.Dot()
 d += elm.SourceV().down().reverse().label("E1 = Vcc ", loc="top")
-d += elm.Dot()
+
 d.push() # guardamos punto medio
 
 d += wire().right().length(2)
@@ -65,26 +65,28 @@ Si se conectan dos resistencias iguales en serie entre el terminal positivo y el
 # La tierra se toma en el punto medio entre las dos resistencias.
 
 elm.ResistorIEC()
-
-d += elm.Line().left().length(2).label("Vcc", loc="right")
+d += elm.Dot()
+d += wire().left().length(2).label("Vcc", loc="right")
+# d += elm.Dot()
 d.push()
 d += elm.ResistorIEC().down().label("R", loc="bottom")
-d += elm.Dot()
+#d += elm.Dot()
 d.push()
-d += elm.Line().right().length(2)
+d += wire().right().length(2)
 d += elm.Ground().label("GND = 0 V", loc="right")
 d.pop()
 d += elm.ResistorIEC().down().label("R", loc="bottom")
 
-d += elm.Line().right().length(2).label("-Vcc", loc="right")
+d += wire().right().length(2).label("-Vcc", loc="right")
+d += elm.Dot()
 
 # Fuente total entre los extremos del divisor.
 d.pop()
-d += elm.Line().left().length(2)
-d += elm.Line().down().length(1.5)
+d += wire().left().length(2)
+d += wire().down().length(1.5)
 d += elm.SourceV().down().reverse().label("E = 2 x Vcc ", loc="top")
-d += elm.Line().down().length(1.5)
-d += elm.Line().right().length(2)
+d += wire().down().length(1.5)
+d += wire().right().length(2)
 ```
 
 Para que el punto medio quede centrado, las dos resistencias deben tener el mismo valor:

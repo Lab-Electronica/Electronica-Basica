@@ -24,12 +24,12 @@ SCHEMDRAW_BLOCK_RE = re.compile(
 SCHEMDRAW_THEME = {
     # Componentes
     "component_color": "#1F2937",
-    "component_lw": 1.7,
-    "fill_color": "#F8FAFC",
+    "component_lw": 2,
+    "fill_color": "#F1E9B9",
 
     # Cables
-    "wire_color": "#1E5AA8",
-    "wire_lw": 1.9,
+    "wire_color": "#172BDF",
+    "wire_lw": 1.5,
 
     # Texto
     "font": "Arial",
