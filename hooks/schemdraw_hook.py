@@ -35,8 +35,12 @@ SCHEMDRAW_THEME = {
     "font": "Arial",
     "fontsize": 12,
 
+    # Tamaño relativo del circuito
+    "unit": 2.0,
+    "inches_per_unit": 0.35,
+    
     # Margen del SVG
-    "margin": 0.25,
+    "margin": 0.7,
 }
 
 
@@ -155,6 +159,8 @@ def _render_schemdraw_svg(code: str, svg_path: Path) -> None:
 
         # aplicamos el tema definido para el circuito
         d.config(
+            unit=SCHEMDRAW_THEME["unit"],
+            inches_per_unit=SCHEMDRAW_THEME["inches_per_unit"],
             color=SCHEMDRAW_THEME["component_color"],
             lw=SCHEMDRAW_THEME["component_lw"],
             fill=SCHEMDRAW_THEME["fill_color"],
