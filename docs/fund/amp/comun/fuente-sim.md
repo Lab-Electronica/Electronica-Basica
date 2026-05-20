@@ -24,26 +24,25 @@ Las dos fuentes se etiquetan como:
 
 El punto común entre ambas fuentes se conecta a tierra. Por tanto, la fuente superior proporciona la tensión positiva y la fuente inferior proporciona la tensión negativa respecto de ese punto de referencia.
 
-```schemdraw name="fuente-simetrica-2g" width=280px title="Fuente simétrica construida con dos fuentes de tensión" alt="Fuente simétrica con dos fuentes de tensión en serie y tierra en el punto medio"
+```schemdraw name="fuente-simetrica-2g" width=200px title="Fuente simétrica construida con dos fuentes de tensión" alt="Fuente simétrica con dos fuentes de tensión en serie y tierra en el punto medio"
 # Fuente simétrica con dos fuentes en serie.
 # El nodo central se toma como tierra.
 
 d += elm.Dot()
-d += elm.Line().left().length(2).label(" Vcc", loc="right")
+d += wire().left().length(2).label(" Vcc", loc="right")
 
 d += elm.SourceV().down().reverse().label("E1 = Vcc ", loc="top")
 d += elm.Dot()
 d.push() # guardamos punto medio
 
-d += elm.Line().right().length(2)
+d += wire().right().length(2)
 d += elm.Ground().label("GND = 0 V", loc="right")
 
-d.pop() # ovlvemos a punto medio
+d.pop() # volvemos a punto medio
 
 d += elm.SourceV().down().reverse().label("E2 = Vcc ", loc="top")
-d += elm.Line().right().length(2).label(" -Vcc", loc="right")
+d += wire().right().length(2).label(" -Vcc", loc="right")
 d += elm.Dot()
-
 
 ```
 
@@ -61,7 +60,7 @@ E = 2 \cdot V_{CC}
 
 Si se conectan dos resistencias iguales en serie entre el terminal positivo y el terminal negativo de la fuente, el punto medio queda situado aproximadamente a la mitad de la tensión total. Ese punto medio puede tomarse como tierra.
 
-```schemdraw name="fuente-sim-r" width=280px title="Fuente simétrica básica obtenida con una fuente y dos resistencias" alt="Fuente simétrica básica con una fuente de tensión y divisor resistivo con tierra en el punto medio"
+```schemdraw name="fuente-sim-r" width=200px title="Fuente simétrica básica obtenida con una fuente y dos resistencias" alt="Fuente simétrica básica con una fuente de tensión y divisor resistivo con tierra en el punto medio"
 # Fuente simétrica básica mediante divisor resistivo.
 # La tierra se toma en el punto medio entre las dos resistencias.
 

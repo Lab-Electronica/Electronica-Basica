@@ -22,14 +22,21 @@ SCHEMDRAW_BLOCK_RE = re.compile(
 
 # Tema común para los circuitos
 SCHEMDRAW_THEME = {
+    # Componentes
+    "component_color": "#1F2937",
+    "component_lw": 1.7,
+    "fill_color": "#F8FAFC",
+
+    # Cables
     "wire_color": "#1E5AA8",
-    "component_color": "#222222",
-    "fill_color": "#F7F9FC",
-    "text_color": "#111827",
-    "wire_lw": 1.8,
-    "component_lw": 1.6,
+    "wire_lw": 1.9,
+
+    # Texto
     "font": "Arial",
     "fontsize": 12,
+
+    # Margen del SVG
+    "margin": 0.25,
 }
 
 
@@ -153,8 +160,16 @@ def _render_schemdraw_svg(code: str, svg_path: Path) -> None:
             fill=SCHEMDRAW_THEME["fill_color"],
             font=SCHEMDRAW_THEME["font"],
             fontsize=SCHEMDRAW_THEME["fontsize"],
+            margin=SCHEMDRAW_THEME["margin"],
         )
-
+        # Caso especial del wire
+        def wire():
+            return elm.Line(
+                color=SCHEMDRAW_THEME["wire_color"],
+                lw=SCHEMDRAW_THEME["wire_lw"],
+            )
+        
+        
         safe_globals = {
             "__builtins__": {
                 "abs": abs,
@@ -169,6 +184,7 @@ def _render_schemdraw_svg(code: str, svg_path: Path) -> None:
             },
             "schemdraw": schemdraw,
             "elm": elm,
+            "wire": wire,
         }
 
         safe_locals = {
