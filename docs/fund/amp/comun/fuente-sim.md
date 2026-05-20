@@ -66,7 +66,7 @@ Si se conectan dos resistencias iguales en serie entre el terminal positivo y el
 d += elm.Dot()
 nodo_superior = d.here
 
-d += wire().left().length(2).label("Vcc", loc="right")
+d += wire().left().length(2).label("  Vcc", loc="right")
 
 # Volvemos al nodo superior para dibujar el divisor hacia abajo
 d.push()
@@ -74,7 +74,6 @@ d.push()
 d += elm.ResistorIEC().down().label("R", loc="bottom")
 
 # Nodo medio del divisor
-d += elm.Dot()
 nodo_medio = d.here
 
 # Rama hacia tierra
@@ -86,10 +85,11 @@ d.pop()
 d += elm.ResistorIEC().down().label("R", loc="bottom")
 
 # Nodo inferior del divisor
-d += elm.Dot()
+# d += elm.Dot()
 nodo_inferior = d.here
 
-d += wire().right().length(2).label("-Vcc", loc="right")
+d += wire().right().length(2).label("  -Vcc", loc="right")
+d += elm.Dot()
 
 # Recuperamos la posición del nodo superior
 d.pop()
@@ -184,11 +184,7 @@ mediante una única fuente y dos resistencias.
 
 La fuente total necesaria sería:
 
-\[ E = 2 \cdot V_{CC} \]
-
-\[ E = 2 \cdot 12\ \text{V}\]
-
-\[ E = 24\ \text{V} \]
+\[ E = 2 \cdot V_{CC} = 2 \cdot 12\ \text{V}= 24\ \text{V} \]
 
 Si se eligen dos resistencias de:
 
@@ -196,21 +192,11 @@ Si se eligen dos resistencias de:
 
 la corriente por el divisor será:
 
-\[ I = \frac{V_{CC}}{R} \]
-
-\[ I = \frac{12\ \text{V}}{1000\ \Omega} \]
-
-\[ I = 0{,}012\ \text{A} \]
-
-\[ I = 12\ \text{mA} \]
+\[ I = \frac{V_{CC}}{R} = \frac{12\ \text{V}}{1000\ \Omega} = 0{,}012\ \text{A} = 12\ \text{mA} \]
 
 La potencia disipada en cada resistencia será:
 
-\[ P_R = \frac{V_{CC}^2}{R} \]
-
-\[ P_R = \frac{12^2}{1000} \]
-
-\[ P_R = 0{,}144\ \text{W} \]
+\[ P_R = \frac{V_{CC}^2}{R} = \frac{12^2}{1000} = 0{,}144\ \text{W} \]
 
 Por tanto, cada resistencia disiparía aproximadamente:
 
